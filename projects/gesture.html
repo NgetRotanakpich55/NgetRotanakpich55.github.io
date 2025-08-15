@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gesture Recognition Web App – Case Study</title>
+    <link href="../styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio<span>.</span></div>
+        <ul class="nav-links">
+            <li><a class="active" href="../Portfolio_Website.html#about">About</a></li>
+            <li><a href="../Portfolio_Website.html#skills">Skills</a></li>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="../Portfolio_Website.html#education">My Education</a></li>
+            <li><a href="../Portfolio_Website.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="case">
+        <header class="case-hero">
+            <h1>Gesture Recognition Web App</h1>
+            <p class="meta">Role: Solo Developer</p>
+        </header>
+        <section class="case-content">
+
+            <section class="cs-section right-img">
+                <div class="cs-wrapper">
+                    <div class="cs-text">
+                        <h3 class="cs-title">Overview</h3>
+                        <p>Developed a <strong>web-based gesture recognition application</strong> using
+                            <strong>Teachable Machine</strong> and <strong>TensorFlow.js</strong> to detect specific
+                            hand gestures via webcam in real time. The project demonstrates potential in
+                            <strong>touchless interfaces</strong>, <strong>gaming controls</strong>, <strong>virtual
+                                reality</strong>, and <strong>sign language education</strong>, emphasizing
+                            accessibility and intuitive interaction.</p>
+                    </div>
+                    <div class="cs-image"><img alt="Gesture Recognition image" src="../photo/Gesture.png"
+                            style="max-width:100%;height:auto;display:block;margin:auto;" /></div>
+                </div>
+            </section>
+            <section class="cs-section left-img">
+                <div class="cs-wrapper">
+                    <div class="cs-image"><img alt="Gesture Recognition image" src="../photo/Gesture2.png"
+                            style="max-width:100%;height:auto;display:block;margin:auto;" /></div>
+                    <div class="cs-text">
+                        <h3 class="cs-title">Data Collection</h3>
+                        <ul>
+                            <li><strong>Sources:</strong>
+                                <ul>
+                                    <li>Captured custom gesture images via Teachable Machine’s webcam tool.</li>
+                                    <li>Augmented dataset with hand gesture images from Kaggle.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Gestures:</strong> “H” (Hello), “Y” (Yes), “N” (No).</li>
+                            <li><strong>Variations:</strong> Recorded under different lighting conditions, angles, and
+                                backgrounds to improve robustness.</li>
+                            <li><strong>Challenges:</strong>
+                                <ul>
+                                    <li><strong>Lighting variability</strong> affecting model accuracy.</li>
+                                    <li><strong>Background interference</strong> introducing false positives.</li>
+                                    <li>Ensuring <strong>diversity in gesture positioning</strong> was time-intensive.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="cs-section right-img">
+                <div class="cs-wrapper">
+                    <div class="cs-text">
+                        <h3 class="cs-title">Model Training</h3>
+                        <ul>
+                            <li><strong>Platform:</strong> Teachable Machine (CNN architecture pre-configured for image
+                                recognition).</li>
+                            <li><strong>Hyperparameters:</strong>
+                                <ul>
+                                    <li>Learning Rate: Default</li>
+                                    <li>Epochs: 50</li>
+                                    <li>Batch Size: Auto-managed</li>
+                                </ul>
+                            </li>
+                            <li><strong>Performance:</strong> Achieved high training accuracy, with occasional
+                                misclassifications under extreme lighting or busy backgrounds.</li>
+                        </ul>
+                    </div>
+                    <div class="cs-image"><img alt="Gesture Recognition image"
+                            src="../photo/Gesture3.png"
+                            style="max-width:100%;height:auto;display:block;margin:auto;" /></div>
+                </div>
+            </section>
+            <section class="cs-section left-img">
+                <div class="cs-wrapper">
+                    <div class="cs-image"><img alt="Gesture Recognition image" src="../photo/Gesture4.png"
+                            style="max-width:100%;height:auto;display:block;margin:auto;" /></div>
+                    <div class="cs-text">
+                        <h3 class="cs-title">Application Development</h3>
+                        <ul>
+                            <li><strong>Integration:</strong> Exported trained model and integrated it into a responsive
+                                web interface.</li>
+                            <li><strong>Technologies Used:</strong>
+                                <ul>
+                                    <li><strong>HTML &amp; CSS</strong> – UI layout and styling</li>
+                                    <li><strong>JavaScript</strong> – Webcam management and prediction handling</li>
+                                    <li><strong>TensorFlow.js</strong> – Real-time model execution in the browser</li>
+                                </ul>
+                            </li>
+                            <li><strong>UI Features:</strong>
+                                <ul>
+                                    <li>Live webcam feed display.</li>
+                                    <li>Real-time gesture prediction with a bar chart showing confidence levels.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="cs-section right-img">
+                <div class="cs-wrapper">
+                    <div class="cs-text">
+                        <h3 class="cs-title">Results &amp; Impact</h3>
+                        <ul>
+                            <li>Delivered a <strong>fully functional browser-based AI application</strong> capable of
+                                detecting gestures without server-side processing.</li>
+                            <li>Demonstrated feasibility of <strong>low-cost, accessible AI solutions</strong> that run
+                                entirely on the client side.</li>
+                            <li>Positioned as a foundation for future expansion into <strong>multi-gesture
+                                    recognition</strong>, <strong>gesture-based navigation</strong>, and
+                                <strong>assistive technologies</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="cs-image"><img alt="Gesture Recognition image" src="../photo/Gesture5.png"
+                            style="max-width:100%;height:auto;display:block;margin:auto;" /></div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Rotanakpich Nget.</p>
+    </footer>
+</body>
+
+</html>

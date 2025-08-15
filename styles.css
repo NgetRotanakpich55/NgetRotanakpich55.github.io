@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* General Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: #00f5d4;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00f5d4;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00f5d4;
+}
+
+/* Hero */
+.hero {
+    padding: 6rem 5% 3rem; /* extra top padding for fixed navbar */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #00f5d4;
+    color: #0f172a;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #00c2a8;
+}
+
+/* Hexagon Image */
+.hexagon {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: #00f5d4;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hexagon img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1 1 400px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-text h3 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #00f5d4;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Education Section */
+.education {
+    padding: 4rem 5%;
+    text-align: center;
+    background: #1e293b;
+}
+
+.education-details {
+    margin-top: 1rem;
+    color: #ccc;
+}
+
+.education-details h3 {
+    color: #00f5d4;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #1e293b;
+    color: #fff;
+}
+
+.contact-form button {
+    background: #00f5d4;
+    color: #0f172a;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #00c2a8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e293b;
+    margin-top: 2rem;
+}
+
+/* Projects grid */
+.projects { padding: 4rem 2rem; background: #0b1220; }
+.projects h2 { text-align:center; margin-bottom:2rem; }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.project-card {
+  background: #111a2e;
+  border: 1px solid #1f2a44;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project-card h3 { margin: 0 0 0.25rem 0; }
+.project-card .meta { font-size: 0.9rem; opacity: 0.8; }
+.project-card .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: #06b6d4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.project-card .btn:hover { background: #0ea5b7; }
+
+.case { padding: 2rem; }
+.case-hero { padding-top: 3.25rem; text-align: center; margin: 2rem 0; }
+.case .meta { opacity: .8; }
+.case-content h2 { margin-top: 1.25rem; }
+.placeholder { border:1px dashed #334; border-radius: 12px; padding:1rem; text-align:center; margin: .5rem 0; }
+
+.about-container, .about-content { display: grid; grid-template-columns: 180px 1fr; gap: 1.25rem; align-items: start; }
+.about-photo img { width: 160px; height: 160px; object-fit: cover; border-radius: 9999px; border: 3px solid #1f2a44; box-shadow: 0 10px 25px rgba(0,0,0,.25); }
+@media (max-width: 720px) {
+  .about-container, .about-content { grid-template-columns: 1fr; }
+  .about-photo { margin: 0 auto 1rem; }
+}
+
+.skills { padding: 4rem 2rem; }
+.skill-groups { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.skill-group h3 { margin-bottom: .5rem; }
+.skill-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.skill-chip { display: inline-flex; align-items: center; gap: .35rem; padding: .4rem .6rem; border: 1px solid #243048; background: #0e1627; border-radius: 999px; font-size: .95rem; }
+.skill-chip .icon { font-size: 1rem; }
+@media (max-width: 720px) { .skill-groups { grid-template-columns: 1fr; } }
+
+.projects-cta { text-align: center; margin-top: 1rem; }
+.see-more { background: transparent; border: 1px solid #2b3a5b; color: #e2e8f0; }
+.see-more:hover { background: #0ea5b7; border-color: #0ea5b7; color: white; }
+
+.skill-chip { position: relative; padding-left: 1.8rem; }
+.skill-chip::before {
+  content: "";
+  position: absolute;
+  left: .6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#06b6d4,#3b82f6);
+  box-shadow: 0 0 0 2px #0e1627;
+}
+.skill-chip .icon { display:none; }
+
+/* Section backgrounds alternating light-dark */
+section { padding: 4rem 2rem; }
+.about, #about { background: #0e1627; }
+.skills { background: #0b1220; } /* slightly different dark */
+.projects { background: #091226; }
+.education, #education { background: #0b1220; }
+.contact, #contact { background: #091226; }
+
+/* All projects grid fixed to 3 columns on desktop */
+.projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+
+/* Align buttons across cards */
+.project-card { display:flex; flex-direction:column; }
+.project-card .btn { margin-top: auto; align-self: flex-start; }
+
+.hero-photo img { width: 160px; height: 160px; border-radius: 9999px; object-fit: cover; border: 3px solid #1f2a44; box-shadow: 0 10px 25px rgba(0,0,0,.25); margin: 1rem auto 0; display:block; }
+
+    
+.hero-inner { display:grid; grid-template-columns: 1fr 220px; gap: 2rem; align-items: center; }
+.hero-text h1 { font-size: 2rem; margin-bottom: .25rem; }
+.hero .tagline { opacity: .9; margin-bottom: .5rem; }
+.hero .sub { opacity: .85; margin-bottom: 1rem; }
+.hero .btn { margin-right: .5rem; }
+.hero-photo img { width: 200px; height: 200px; border-radius: 9999px; object-fit: cover; border:3px solid #1f2a44; box-shadow: 0 10px 25px rgba(0,0,0,.25); }
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; text-align:center; }
+  .hero-photo img { margin: 0 auto; }
+}
+
+.about { background:#0e1627; padding: 4rem 2rem; }
+.about-wrapper { display:grid; grid-template-columns: 180px 1fr; gap: 1.5rem; align-items:start; }
+.about-photo img { width: 160px; height: 160px; object-fit: cover; border-radius:9999px; border:3px solid #1f2a44; }
+@media (max-width: 780px){ .about-wrapper{ grid-template-columns:1fr; text-align:center; } .about-photo img{ margin: 0 auto 1rem; } }
+
+.skills { padding: 4rem 2rem; background:#0b1220; }
+.skill-cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.skill-card { background:#111a2e; border:1px solid #1f2a44; border-radius:12px; padding:1.25rem; }
+.skill-list { display:flex; flex-wrap:wrap; gap:.5rem .75rem; margin-top:.5rem; }
+.skill-list li { list-style:none; padding:.35rem .6rem; border:1px solid #243048; background:#0e1627; border-radius:999px; font-size:.95rem; }
+
+.projects { padding: 4rem 2rem; background:#091226; }
+.projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.project-card { background:#111a2e; border:1px solid #1f2a44; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+.project-img { width:100%; height: 160px; background:#0e1627; display:block; }
+.project-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.project-body { border-top:1px solid #1f2a44; padding: 1rem; display:flex; flex-direction:column; gap:.4rem;  }
+.project-body .meta { opacity:.85; font-size:.95rem; }
+.project-body .desc { opacity:.9; flex-grow:1; }
+
+.project-body .btn:hover { background:#0ea5b7; border-color:#0ea5b7; color:white; }
+
+/* Full-width project buttons */
+.project-card .btn, .project-card .btn.ghost {
+  display:block; width:100%; text-align:center;
+  margin-top:.75rem; padding:.6rem 1rem; border-radius:12px;
+}
+/* Keep theme default button colors (inherit from .btn) */
+
+@media (min-width: 980px){
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.projects-grid .project-card .btn { width:100%; text-align:center; }
+
+/* Extra spacing below nav for section/page headers */
+.projects h2, .case-hero { padding-top: 2.25rem; }
+/* Hero dark theme adjustments */
+#hero {background:#0b1322;}
+
+.hero-buttons { margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap; }
+.hero-buttons .btn { padding:0.75rem 1.25rem; }
+
+/* Force hero buttons to stack under the description in the left/text column */
+.hero .hero-buttons { display:flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+.hero .hero-buttons .btn { display:inline-block; }
+
+/* Uniform project cards */
+.projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.project-card { background:#0e1627; padding:1rem; border-radius:16px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.project-card h3 { margin: 0.5rem 0; }
+.project-card .meta { opacity: 0.8; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.project-card .project-thumb { width:100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; background:#0b1322; display:flex; align-items:center; justify-content:center; }
+.project-card .project-thumb img { width:100%; height:100%; object-fit: cover; }
+.project-card .btn { margin-top:0.5rem; display:inline-block; }
+
+/* Smaller skills cards as requested */
+#skills .card, .skills .card { padding: 0.75rem 1rem !important; transform: scale(0.95); }
+#skills .card h3, .skills .card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+#skills .card p, #skills .card li, .skills .card p, .skills .card li { font-size: 0.95rem; }
+
+.hero-greeting .accent-im { color: #00f5d4; }
+
+/* Add an icon before each skill item */
+#skills li::before, .skills li::before { content: "▹"; margin-right: 0.5rem; display: inline-block; transform: translateY(-1px); opacity: 0.9; }
+
+/* Force exactly 3 cards per row on All Projects */
+.projects-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 1.25rem !important; }
+
+/* Smaller skills cards */
+#skills .card, .skills .card { padding: 0.75rem 1rem !important; transform: scale(0.95); }
+#skills .card h3, .skills .card h3 { font-size: 1rem !important; margin-bottom: 0.5rem; }
+#skills .card p, #skills .card li, .skills .card p, .skills .card li { font-size: 0.95rem !important; }
+
+.hero-greeting { font-size: 2rem !important; margin: 0 0 0.25rem 0; }
+
+@media (min-width: 0px) {
+  .case .projects-grid, .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+/* Alternating text-image sections */
+.alt-section { padding: 2rem 0; }
+.alt-wrapper { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.alt-text, .alt-image { flex: 1 1 45%; }
+.alt-image img { width: 100%; height: auto; border-radius: 8px; }
+@media (max-width: 768px) {
+  .alt-wrapper { flex-direction: column; }
+}
+
+/* Case study sections match About Me layout */
+.alt-wrapper.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.alt-wrapper.about-layout .alt-text,
+.alt-wrapper.about-layout .alt-image {
+  flex: 1 1 45%;
+}
+.alt-wrapper.about-layout .alt-image img.about-img-size {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .alt-wrapper.about-layout { flex-direction: column; }
+  .alt-wrapper.about-layout .alt-image img.about-img-size { width: 100%; }
+}
+
+/* Case study sections styled like About Me */
+.case .about-wrapper { display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 900px) { .case .about-wrapper { grid-template-columns: 1fr; } }
+
+/* Case study 3-section alternating layout (rectangular images) */
+.cs-section { padding: 2.5rem 0; }
+.cs-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.cs-text { font-size: 1.05rem; line-height: 1.75; }
+.cs-title { margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+.cs-image img { width: 100%; height: auto; border-radius: 12px; display: block; }
+@media (max-width: 900px) { .cs-wrapper { grid-template-columns: 1fr; } .cs-image { order: 2; } }
+
+/* Match case study sizes to About Me */
+.cs-title { font-size: 2rem !important; font-weight: 700; }
+.cs-text p { font-size: .95rem !important; }
+/* Make case study image column width similar to About Me's photo column */
+.cs-wrapper { grid-template-columns: 300px 1fr !important; }
+.cs-image img { width: 100%; height: auto; border-radius: 12px; }
+@media (max-width: 900px) { .cs-wrapper { grid-template-columns: 1fr !important; } }
+
+.browse-note { text-align: center; margin: 0.5rem 0 1.5rem 0; }
+
+/* === Case study sizing override to match "Approach & Tools" compact look === */
+.cs-section .cs-title { font-size: 1.5rem !important; font-weight: 700; line-height: 1.2; }
+.cs-section .cs-text p { font-size: 1rem !important; line-height: 1.7; }
+.cs-section .cs-wrapper { grid-template-columns: 320px 1fr !important; gap: 1.5rem !important; }
+.cs-section .cs-image img { max-width: 320px !important; width: 100% !important; height: auto !important; border-radius: 12px; display:block; }
+@media (max-width: 900px) {
+  .cs-section .cs-wrapper { grid-template-columns: 1fr !important; }
+  .cs-section .cs-image img { max-width: 100% !important; }
+}
+
+/* ===== Case Study Wireframe Layout (keeps dark theme) ===== */
+.cs-section { padding: 2.5rem 0; }
+.cs-section:nth-of-type(even) { background: rgba(255,255,255,0.02); } /* subtle band like wireframe */
+.cs-wrapper {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;  /* text wider than image (≈60/40) */
+  gap: 2rem;
+  align-items: center;
+}
+/* Image on the right */
+.cs-section.right-img .cs-wrapper { grid-template-columns: 1.6fr 1fr; }
+.cs-section.right-img .cs-text { order: 1; }
+.cs-section.right-img .cs-image { order: 2; }
+/* Image on the left */
+.cs-section.left-img .cs-wrapper { grid-template-columns: 1fr 1.6fr; }
+.cs-section.left-img .cs-image { order: 1; }
+.cs-section.left-img .cs-text { order: 2; }
+
+/* Ensure images are consistent rectangles and don't overflow */
+.cs-image img { width: 100%; max-width: 520px; height: auto; border-radius: 12px; display:block; margin: 0; }
+
+/* Titles and text spacing for clean rhythm */
+.cs-title { margin: 0 0 0.5rem 0; font-weight: 700; }
+.cs-text p { margin: 0; line-height: 1.7; }
+@media (max-width: 900px) {
+  .cs-section .cs-wrapper { grid-template-columns: 1fr !important; }
+}
+
+/* === Force image at far right, text fills remaining space for case studies === */
+.cs-section .cs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto; /* text grows, image sized by content */
+  align-items: center;
+  gap: 2rem;
+}
+.cs-section .cs-text { min-width: 0; } /* allow text to shrink without overflow */
+.cs-section .cs-image { justify-self: end; } /* push image to the right-most edge */
+.cs-section .cs-image img { max-width: 520px; width: 100%; height: auto; border-radius: 12px; display: block; }
+@media (max-width: 900px) {
+  .cs-section .cs-wrapper { grid-template-columns: 1fr; }
+  .cs-section .cs-image { justify-self: start; } /* on mobile, image follows naturally */
+}
+
+/* === Alternating case-study layout fix === */
+/* Let text fill until the image; image sits at far edge */
+.cs-section .cs-text { max-width: none !important; width: auto !important; min-width: 0; }
+.cs-section .cs-text p { white-space: normal; }
+.cs-section.right-img .cs-wrapper {
+  display: grid;
+  grid-template-columns: 1.6fr minmax(320px, 520px) !important;
+  align-items: center; gap: 2rem;
+}
+.cs-section.left-img .cs-wrapper {
+  display: grid;
+  grid-template-columns: minmax(320px, 520px) 1.6fr !important;
+  align-items: center; gap: 2rem;
+}
+.cs-section .cs-image { justify-self: end; }
+.cs-section.left-img .cs-image { justify-self: start; }
+.cs-section .cs-image img { width: 100%; height: auto; border-radius: 12px; display:block; }
+/* Mobile */
+@media (max-width: 900px) {
+  .cs-section .cs-wrapper { grid-template-columns: 1fr !important; }
+  .cs-section .cs-image { justify-self: start; }
+}
+
+/* All Projects header styling to match homepage section titles */
+.projects-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0.75rem 0 0.25rem 0;
+}
+.projects-title .accent-word { color: #00f5d4; }
+.projects-subtitle {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.9;
+  margin: 0 0 1.25rem 0;
+}
+.projects-grid { margin-top: 0.5rem !important; }
+
+
+/* ---------- Generic image slots (works everywhere) ---------- */
+/* Make any case-study image scale inside its own invisible rectangle */
+.case .cs-section img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;       /* fit inside the box without cropping */
+}
+
+/* The rectangle (applied to the image's immediate container)       */
+/* We detect that container automatically using :has(> img)         */
+.case .cs-section .cs-wrapper > div:has(> img) {
+  /* responsive width; tweak the middle 24vw value if needed */
+  inline-size: clamp(160px, 24vw, 360px);
+  /* set a default aspect ratio; this defines the “invisible rectangle” */
+  aspect-ratio: 1 / 1;       /* default square */
+  background: transparent;   /* invisible */
+}
+
+/* ---------- Specific slots for your two images ---------- */
+/* Rasa logo block = square */
+.case .cs-section .cs-wrapper > div:has(> img[src*="rasa"]) {
+  aspect-ratio: 1 / 1;
+}
+
+/* TAM3 chart block = widescreen */
+.case .cs-section .cs-wrapper > div:has(> img[src*="tam3"]),
+.case .cs-section .cs-wrapper > div:has(> img[alt*="TAM3"]) {
+  aspect-ratio: 16 / 9;
+  inline-size: clamp(220px, 32vw, 520px); /* charts can be a bit wider */
+}
+
+/* Optional: center the image boxes in their column */
+.case .cs-section .cs-wrapper > div:has(> img) {
+  margin-inline: auto;
+}
+
+.case .case-hero {
+  margin: 0.75rem 0 0.5rem;
+}
+
+.case .case-hero .projects-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.case .case-hero .alt-section {
+  display: none;
+}

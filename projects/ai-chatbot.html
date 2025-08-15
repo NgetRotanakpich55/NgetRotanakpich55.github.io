@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>AI Chatbot – Case Study</title>
+  <link href="../styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">Portfolio<span>.</span></div>
+    <ul class="nav-links">
+      <li><a class="active" href="../Portfolio_Website.html#about">About</a></li>
+      <li><a href="../Portfolio_Website.html#skills">Skills</a></li>
+      <li><a href="index.html">Projects</a></li>
+      <li><a href="../Portfolio_Website.html#education">My Education</a></li>
+      <li><a href="../Portfolio_Website.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="case">
+    <header class="case-hero">
+      <h1>AI Chatbot for Campus Inquiries</h1>
+      <p class="meta">Role: Team Lead & NLP Engineer</p>
+    </header>
+    <section class="case-content">
+      <section class="cs-section right-img">
+        <div class="cs-wrapper">
+          <div class="cs-text">
+            <h3 class="cs-title">Overview</h3>
+            <p>Developed an AI-powered chatbot to provide students with instant, 24/7 answers to academic questions
+              (e.g., academic administration, university services, grade policies, courses & registration) at Paragon
+              International University. Built on Rasa (NLU + Core) with a structured knowledge base sourced from
+              official documents (student handbook, FAQs) and validated with faculty/staff. Accessible on Telegram and a
+              web interface with secure access via Google OAuth.</p>
+          </div>
+          <div class="cs-image"><img alt="Overview" src="../photo/Paragon.png" /></div>
+        </div>
+      </section>
+      <section class="cs-section left-img">
+        <div class="cs-wrapper">
+          <div class="cs-image"><img alt="Approach &amp; Tools" src="../photo/Rasa.png" /></div>
+          <div class="cs-text">
+            <h3 class="cs-title">Approach &amp; Tools</h3>
+            <p>The chatbot was engineered from the ground up to <strong>deliver instant, reliable academic
+                information</strong> with the intelligence and flexibility students expect.</p>
+            <ul>
+              <li><strong>Core Intelligence:</strong> Built on <strong>Rasa Open Source</strong> (NLU + Core),
+                leveraging the <strong>DIETClassifier</strong> for precise intent detection and entity extraction,
+                supported by <strong>SpaCy</strong> embeddings and carefully designed lookup tables &amp; synonym
+                mappings to interpret varied student language.</li>
+              <li><strong>Conversational Flow:</strong> Combined <strong>RulePolicy</strong> for predictable academic
+                queries with <strong>Memoization</strong> for context retention, while the <strong>TED Policy</strong>
+                acted as a robust fallback for unfamiliar conversation paths.</li>
+              <li><strong>Knowledge Integration:</strong> Answers were pulled from a structured <strong>MongoDB</strong>
+                knowledge base, meticulously curated from the official Student Handbook, academic regulations, and
+                university office updates.</li>
+              <li><strong>Multi-Platform Access:</strong> Integrated with <strong>Telegram</strong> for convenience and
+                a secure <strong>web client</strong> using <strong>Google OAuth</strong> for identity verification,
+                ensuring information was accessible only to legitimate students.</li>
+              <li><strong>Deployment &amp; Reliability:</strong> Deployed via <strong>Docker</strong> containers on a
+                <strong>DigitalOcean VPS</strong>, with <strong>MobaXterm</strong> and <strong>tmux</strong> used to
+                manage persistent, fault-tolerant services. Logging and monitoring were handled through
+                <strong>Loguru</strong> for rapid troubleshooting.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="cs-section right-img">
+        <div class="cs-wrapper">
+          <div class="cs-text">
+            <h3 class="cs-title">Results &amp; Impact</h3>
+            <ul>
+              <p>The deployment of the chatbot <strong>transformed the way students accessed academic
+                  information</strong> at Paragon International University:</p>
+              <ul></ul>
+              <li><strong>High User Acceptance:</strong> A <strong>TAM3-based evaluation</strong> revealed strong
+                agreement on ease-of-use and perceived usefulness, with students highlighting the chatbot’s simplicity,
+                speed, and accuracy.</li>
+              <li><strong>Operational Efficiency:</strong> By automating answers to repetitive queries, the chatbot
+                significantly <strong>reduced administrative workload</strong>, freeing staff to focus on higher-value
+                tasks.</li>
+              <li><strong>Accuracy &amp; Consistency:</strong> Iterative data refinement, entity synonym mapping, and
+                fallback policies improved <strong>answer reliability</strong> across hundreds of unique student
+                phrasings.</li>
+              <li><strong>Cross-Platform Consistency:</strong> Delivered the same trustworthy information whether
+                accessed on Telegram or the web, maintaining a seamless experience across devices.</li>
+              <li><strong>24/7 Availability:</strong> Provided <strong>round-the-clock assistance</strong>, ensuring
+                students could get accurate academic guidance without waiting for office hours.</li>
+            </ul>
+          </div>
+          <div class="cs-image"><img alt="Results &amp; Impact" src="../photo/AIResult.PNG" /></div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Rotanakpich Nget.</p>
+  </footer>
+</body>
+
+</html>
